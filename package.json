@@ -1,0 +1,25 @@
+{
+  "name": "connect-php",
+  "version": "1.0.0",
+  "description": "this is a connect-php and browser-sycn example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doulele/connect-php.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doulele/connect-php/issues"
+  },
+  "homepage": "https://github.com/doulele/connect-php#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-htmlmin": "^5.0.1"
+  }
+}
