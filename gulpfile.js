@@ -9,6 +9,12 @@ gulp.task('html',function(){
 		.pipe(gulp.dest('product/'))
 		.pipe(browserSync.reload({stream:true}))
 })
+gulp.task('php',function(){
+	return gulp.src('develop/*php')
+		.pipe(gulp.dest('product'))
+		.pipe(browserSync.reload({stream:true}))
+})
+
 gulp.task('server',function(){
 	var options={
 		base:'./product',
@@ -29,6 +35,7 @@ gulp.task('browser-sync',function(){
 	return browserSync.init(options);
 })
 gulp.task('watch',function(){
-	gulp.watch('develop/*html',gulp.series('html'))
+	gulp.watch('develop/*html',gulp.series('html'));
+	gulp.watch('develop/*php',gulp.series('php'));
 })
-gulp.task('default',gulp.series('html',gulp.parallel('server','browser-sync','watch')));
+gulp.task('default',gulp.series('html','php',gulp.parallel('server','browser-sync','watch')));
